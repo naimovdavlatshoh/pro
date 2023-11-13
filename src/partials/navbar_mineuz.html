@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg @@classList">
+    @@if (!context.fancy) {
+      <div class="container justify-content-center align-items-between">
+    }
+    @@if (context.fancy) {
+      <div class="container">
+      <div class="navbar-collapse-wrapper bg-white d-lg-flex flex-row flex-nowrap w-100 justify-content-start align-items-center">
+    }
+      <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none">
+        <div class="navbar-brand"><a href="@@webRoot/index.html">
+          @@if (!context.logoBoth) {       
+            @@if (!context.logoLight) {
+              <img style="width: 50px;" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png 2x" alt="" />
+            }
+            @@if (context.logoLight) {
+              <img style="width: 50px;" src="@@webRoot/assets/img/ProUnity.png" srcset="@@webRoot/assets/img/ProUnity.png 2x" alt="" />
+            }
+          }
+          @@if (context.logoBoth) {
+            <img style="width: 50px;" class="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png 2x" alt="" />
+            <img style="width: 50px;" class="logo-light" src="@@webRoot/assets/img/ProUnity.png" srcset="@@webRoot/assets/img/ProUnity.png 2x" alt="" />
+          }
+        </a></div>
+        <div class="navbar-other ms-auto">
+          <ul class="navbar-nav flex-row align-items-center">
+            <li class="nav-item d-lg-none">
+              <button class="hamburger offcanvas-nav-btn"><span></span></button>
+            </li>
+          </ul>
+          <!-- /.navbar-nav -->
+        </div>
+        <!-- /.navbar-other -->
+      </div>
+      <!-- /.d-flex -->
+      @@if (!context.fancy) {
+        <div class="navbar-collapse-wrapper d-flex ">
+      }
+      @@if (context.fancy) {
+        <div class="navbar-collapse-inner d-flex ">
+      }
+        <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+          <div class="">
+            @@if (!context.logoBoth) {
+              @@if (!context.logoLight) {
+                <a href="@@webRoot/index.html" class="transition-none d-none d-lg-flex"><img style="width: 100px;" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}png 2x" alt="" /></a>
+              }
+            }
+            @@if (context.logoBoth) {
+              <a href="@@webRoot/index.html" class="transition-none d-none d-lg-flex"><img style="width: 100px;" class="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnity}.png 2x" alt="" />
+              <img style="width: 100px;" class="logo-light" src="@@webRoot/assets/img/ProUnity.png" srcset="@@webRoot/assets/img/ProUnity.png 2x" alt="" /></a>
+            }
+            <h3 class="text-white fs-30 mb-0 d-lg-none">ProUnity</h3>
+          </div>
+          @@if (!context.onePage) {
+            @@if (!context.docs) {
+              @@include('menu_linksuz.html', {
+                "centerLogo": true
+              })
+            }
+            @@if (context.docs) {
+              @@include('docs/_menu-links.html', {
+                "centerLogo": true
+              })
+            }
+          }
+          @@if (context.onePage) {
+            @@include('_menu-links-onepage.html', {
+            "centerLogo": true
+          })
+          }
+          <div class="offcanvas-body d-lg-none order-4 mt-auto">
+
+          </div>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.navbar-collapse-wrapper -->
+    @@if (!context.fancy) {
+    </div>
+    <!-- /.container -->
+  }
+  @@if (context.fancy) {
+      </div>
+      <!-- /.navbar-collapse-wrapper -->
+    </div>
+    <!-- /.container -->
+  }
+  </nav>
+  <!-- /.navbar -->

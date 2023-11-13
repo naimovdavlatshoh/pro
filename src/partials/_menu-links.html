@@ -1,0 +1,40 @@
+@@if (!context.centerLogo) {
+  <ul class="navbar-nav">
+    }
+  @@if (context.centerLogo) {
+    <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
+      <ul class="navbar-nav ms-lg-auto">
+        }
+        <li >
+          <a class="nav-link" href="#" data-bs-toggle="dropdown">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" data-bs-toggle="dropdown">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="dropdown">Frameworks</a>
+        </li>
+        <li class="nav-item dropdown dropdown-mega">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Languages</a>
+          <ul class="dropdown-menu mega-menu col-lg-2">
+            <li class="mega-menu-content">
+              <div class="row gx-0 gx-lg-3">
+                <div class="col-lg-2">
+                  <ul class="list-unstyled cc-3">
+                    <li><a class="dropdown-item" href="../prounityuz.html">in Uzbek language</a></li>
+                    <li><a class="dropdown-item" href="../prounityru.html">in Russian language</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+          @@if (context.centerLogo) {
+        </ul>
+        <!-- /.navbar-nav -->
+    </div>
+  }
+  @@if (!context.centerLogo) {
+  </ul>
+  <!-- /.navbar-nav -->
+  }
